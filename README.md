@@ -23,11 +23,16 @@ Rút tiền từ tài khoản
 Xem lịch sử giao dịch
 
 # Clean Architecture Layers
-Layer	          Responsibility	         Components
-Interfaces	    Giao tiếp với bên ngoài	Controllers, DTOs, Projectors
-Application	    Xử lý use cases	         Commands, Queries, Handlers, Ports
-Domain	       Business logic cốt lõi	   Aggregates, Events, Deciders
-Infrastructure	 Technical implementation	Event Store, Repositories, Adapters
+
+| Layer | Responsibility | Components |
+|-------|----------------|------------|
+| **Interfaces** | Giao tiếp với bên ngoài | Controllers, DTOs, Projectors |
+| **Application** | Xử lý use cases | Commands, Queries, Handlers, Ports |
+| **Domain** | Business logic cốt lõi | Aggregates, Events, Deciders |
+| **Infrastructure** | Technical implementation | Event Store, Repositories, Adapters |
+
+### Event Sourcing Flow
+
 
 # Event Sourcing Flow
 Command → CommandHandler → Decider → Events → Event Store → EventBus → Projector → Read Model
